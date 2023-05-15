@@ -1,0 +1,18 @@
+#nav {
+    background-color: rgb(172, 59, 206);
+    display: flex;
+    list-style: none;
+    justify-content: end;
+}
+
+#nav a {
+    color: aliceblue;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}
+
+#nav:hovers {
+    background-color: rgb(216, 17, 37);
+    
+}

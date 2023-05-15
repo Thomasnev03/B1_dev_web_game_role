@@ -1,0 +1,10 @@
+.imagebackgroundacc{
+    background-image: url("https://gamesboard.info/wp-content/uploads/2022/04/godfall-ultimate-edition-4.jpg");
+background-image: cover;
+}
+
+.text {
+   text-align: center;
+   color: maroon;
+   font-size: large;
+}
