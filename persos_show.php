@@ -1,4 +1,5 @@
 <?php 
+
     require_once('functions.php');
 
     if (!isset($_SESSION['user'])) {
@@ -22,10 +23,12 @@
 
     $perso = $sth->fetch();
 ?>
-
-<?php require_once('_header.php'); ?>
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/main.css">
+<?php require_once('nav.php'); ?>
 
 <div class="container">
+    
     <h1>Détails du personnage</h1>
 
     <div>
@@ -34,6 +37,10 @@
     
     <div class="mt-2">
         <b>Force:</b> <?php echo $perso['for']; ?>
+    </div>
+
+    <div class="mt-2">
+        <b>Expérience:</b> <?php echo $perso['xp']; ?>
     </div>
 
     <div class="mt-2">

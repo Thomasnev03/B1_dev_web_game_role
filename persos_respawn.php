@@ -26,11 +26,12 @@
     $sth = $bdd->prepare($sql);
 
     $sth->execute([
-        'gold'      => ($perso['gold']/2),
+        //'xp'        =>($perso['xp']=0),
+        'gold'      => ($perso['gold']=0),
         'pdv'       => 20,
         'id'        => $perso['id'],
         'user_id'   => $_SESSION['user']['id']
     ]);
 
-    header('Location: persos.php?msg=perso de retour !');
+    header('Location: persos.php?msg=perso ressusciter!');
 ?>

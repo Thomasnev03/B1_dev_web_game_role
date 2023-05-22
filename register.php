@@ -21,10 +21,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/nav.css">
+
 </head>
 <body>
-    <?php require_once('nav.php'); ?>
+    <?php require_once('nav3.php'); ?>
     <form action="" method="post">
         <h1>Création de votre compte</h1>
         <div>

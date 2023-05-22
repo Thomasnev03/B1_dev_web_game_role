@@ -1,10 +1,23 @@
-.imagebackgroundacc{
-    background-image: url("https://gamesboard.info/wp-content/uploads/2022/04/godfall-ultimate-edition-4.jpg");
-background-image: cover;
+body {
+background-image: url("https://ci3.googleusercontent.com/proxy/NMuL-UZm1KzJ33p8AJuAsCt-L6E4RhcNvn0eP1Ap2wKsr8d2ldPbGlCm-Pqr16cTz8j8tu_td2Y7EIA=s0-d-e1-ft");
+
 }
 
 .text {
    text-align: center;
-   color: maroon;
+   color: rgb(0, 0, 0);
    font-size: large;
 }
+
+input[type="submit"] {
+padding: 10px; 
+font-size: 25px;
+border: 1px solid red;
+text-align: center;
+}
+
+input[type="submit"]:hover {
+    border-color: aqua;
+    color: blueviolet;
+}
+

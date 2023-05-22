@@ -1,8 +1,12 @@
 #nav {
-    background-color: rgb(172, 59, 206);
+    background-image: url("https://th.bing.com/th/id/R.e8f4e2fa0551c142ed90e21861280d7a?rik=QvBOJfV5Q4zubg&riu=http%3a%2f%2fp9.storage.canalblog.com%2f94%2f65%2f937437%2f91319592_o.jpg&ehk=4sg9j%2fuqru7KBt0YY42MCcNNLCH839ZVVyl3YvocSbY%3d&risl=&pid=ImgRaw&r=0");
     display: flex;
     list-style: none;
     justify-content: end;
+    height: 50px;
+    background-size: cover;
+    opacity: 0.8;
+    border-radius: 8px;
 }
 
 #nav a {
@@ -12,7 +16,12 @@
     display: inline-block;
 }
 
-#nav:hovers {
-    background-color: rgb(216, 17, 37);
-    
+.btn-purple {
+    background: purple;
+    color: aliceblue;
+    border-radius: 8px;
+}
+
+.btn-purple:hover {
+    background-color: rgb(44, 189, 95);
 }

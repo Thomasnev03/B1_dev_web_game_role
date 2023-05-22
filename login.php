@@ -30,12 +30,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/backgroundlog.css">
+    <link rel="stylesheet" href="css/log.css">
     <link rel="stylesheet" href="css/nav.css">
 </head>
+<?php require_once('nav2.php'); ?>
 <body>
-    <?php require_once('nav.php'); ?>
-    <div class="imagebackground">
+
+    <div class="container_form">
     <form action="" method="post">
         <h1>Connexion</h1>
 
@@ -64,11 +65,12 @@
         </div>
 
         <div>
-            <input type="button" value="contact" value="Nous contacter"/>
+        <a href="contactadmin.php"> <input type="button" value="contact" value="Nous contacter"/>
+           </a>
         </div>
 
     </form>
-    
+    </div>
 </body>
 </div>
 </html>

@@ -26,9 +26,9 @@
 ?>
 
 <?php require_once('header.php'); ?>
-<link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/nav.css">
-
+<link rel="stylesheet" href="css/donjonentree.css">
+<body>
     <div class="container">
         <?php echo $_SESSION['perso']['name']; ?> (<a href="persos.php">Changer</a>)
         <ul>

@@ -32,6 +32,8 @@
     <a class="btn btn-green" href="persos_add.php">Créer un personnage</a>
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/accueil.css">
+  
     <table class="table">
         <thead>
             <tr>
@@ -45,9 +47,10 @@
                 <th>Intelligence</th>
                 <th>Vitesse</th>
                 <th>Or</th>
-                <th width="30%">Action</th>
+                <th width="40%">Action</th>
             </tr>
         </thead>
+        
         <tbody>
             <?php foreach ($persos as $perso) { ?>
                 <tr>
@@ -67,12 +70,17 @@
                                 class="btn btn-grey"
                                 href="persos_choice.php?id=<?php echo $perso['id']; ?>" 
                             >Choisir</a>
-                        <?php } else { ?>
+                        <?php } elseif ($perso['gold' > 100]) { ?>
                             <a 
                                 class="btn btn-green"
                                 href="persos_respawn.php?id=<?php echo $perso['id']; ?>" 
                             >Résussité</a>
-                        <?php } ?>
+                    
+                        <?php } else { ?>
+                            <a 
+                            class="btn btn-red"
+                            >Le personnage est mort impossible de le ressuciter</a>
+                            <?php }?>
 
                         <a 
                             class="btn btn-grey"
@@ -95,5 +103,6 @@
         </tbody>
     </table>
 </div>
+
 </body>
 </html>

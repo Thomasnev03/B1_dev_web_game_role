@@ -6,7 +6,7 @@ class Sorcier extends Ennemi
 {
     public function __construct()
     {
-        $this->pol = 3;
+        $this->pol = 5;
         $this->name = "Sorcier";
         $this->power = 25;
         $this->constitution = 12;

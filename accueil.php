@@ -31,17 +31,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="css/accueil.css">
+        <link rel="stylesheet" href="css/nav.css">
     </head>
+    
+    <?php require_once('nav.php'); ?>
     <body>
-        <div class="imagebackgroundacc">
-            <div class="text"><h1>Bienvenue sur le jeu ROLEDJ</h1>
-            <h2>Voici les règle :</h2>
+    <div class="text"><h1>Bienvenue sur le jeu ROLEDJ</h1></div>
+           <div class="texteacc"> <h2>Voici les règle :</h2>
             <p>zzaaal,efnnfkalnfnklnfzjbfhabefbjab</p>
-            </div>
             <form action="persos.php">
     <input type="submit" value="accéder au jeu">
     </form>
-    </div>
+    </div> 
+
+        
 
     </body>
     </html>

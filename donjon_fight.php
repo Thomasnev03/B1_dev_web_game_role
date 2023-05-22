@@ -19,11 +19,11 @@
     {
         $nb = random_int(0,10);
 
-        if ($nb <= 6) {
+        if ($nb <= 5) {
             $ennemi = new Gobelin();
-        } else if ($nb = 7||8) {
+        } else if ($nb = 6||7) {
             $ennemi = new DarkKnight();
-        } else {
+        } else  {
             $ennemi = new Sorcier();
         }
 
@@ -101,11 +101,11 @@
                     $_SESSION['fight']['html'][] = "Il vous inflige " . ($degat - floor($_SESSION['perso']['for']/3)) . " dégats";
                     $_SESSION['perso']['pdv'] -=  $degat - floor($_SESSION['perso']['for']/3);
                 } else {
-                    $_SESSION['fight']['html'][] = "Il vous rate votre ennmi.";
+                    $_SESSION['fight']['html'][] = "votre ennemi vous rate.";
                 }
             }
         } else {
-            $_SESSION['fight']['html'][] = "Vous ratez votre ennmi.";
+            $_SESSION['fight']['html'][] = "Vous ratez votre ennemi.";
 
             // Attaque de l'ennemi
             $_SESSION['fight']['html'][] = "Votre ennemi attaque";
@@ -122,17 +122,18 @@
                     $_SESSION['fight']['html'][] = "Vous etes mort.";
                 }
             } else {
-                $_SESSION['fight']['html'][] = "Il vous rate votre ennmi.";
+                $_SESSION['fight']['html'][] = "Votre ennemi vous rate.";
             }
         }
     }
 
     // Sauvegarde de l'état de votre personnage
     $bdd = connect();
-    $sql = "UPDATE persos SET `gold` = :gold, `pdv` = :pdv WHERE id = :id AND user_id = :user_id;";    
+    $sql = "UPDATE persos SET `xp` = :xp, `gold` = :gold, `pdv` = :pdv WHERE id = :id AND user_id = :user_id;";    
     $sth = $bdd->prepare($sql);
 
     $sth->execute([
+        'xp'       => $_SESSION['perso']['xp'],
         'gold'      => $_SESSION['perso']['gold'],
         'pdv'       => $_SESSION['perso']['pdv'],
         'id'        => $_SESSION['perso']['id'],
@@ -144,7 +145,7 @@
     if ($_SESSION['perso']['pdv'] <= 0) {
         unset($_SESSION['perso']);
         unset($_SESSION['fight']);
-       //  header('Location: dead_perso.php');
+        header('Location: dead_perso.php');
     }
 
     require_once('header.php');

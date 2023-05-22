@@ -7,12 +7,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
      <link rel="stylesheet" href="css/nav.css">
+     <link rel="stylesheet" href="css/logout.css">
 </head>
+<div>
 <body>
-    <?php require('nav.php'); ?>
+    <?php require('nav2.php'); ?>
     <?php
         echo "Vous avez quittez votre session !";
     ?>
+    <?php header("refresh:3, url=login.php")?>
 </body>
+</div>
 </html>
 

@@ -6,7 +6,7 @@ class Room {
     private string $type;
     private int $donjon_id;
     private int $or;
-    public string $picture;
+    public string $image;
 
     public function __construct($room)
     {
@@ -46,7 +46,7 @@ class Room {
                 $html .= "<p class='mt-4'><a href='donjon_play.php?id=". $this->donjon_id ."' class='btn btn-green'>Continuer l'exploration</a></p>";
                 break;
 
-            case 'treasure':
+            case 'treasur':
                 $html .= "<p class='mt-4'>Vous avez gagné " . $this->or . " pièce d'or</p>";
                 $html .= "<p class='mt-4'><a href='donjon_play.php?id=". $this->donjon_id ."' class='btn btn-green'>Continuer l'exploration</a></p>";
                 break;
@@ -55,7 +55,9 @@ class Room {
                 $html .= "<p class='mt-4'><a href='donjon_fight.php?id=". $this->donjon_id ."' class='me-2 btn btn-green'>Combattre</a>";
                 $html .= "<a href='donjon_play.php?id=". $this->donjon_id ."' class='btn btn-blue'>Fuir et continuer l'exploration</a></p>";
                 break;
-            
+            case 'trap':
+                $html .= "<p class='mt-4'><a href='donjon_fight.php?id=". $this->donjon_id ."' class='btn btn-green'>Continuer l'exploration</a></p>";
+break;
             default:
                 $html .= "<p>Aucune action possible !</p>";
                 break;
@@ -70,12 +72,13 @@ class Room {
             case 'vide':
                 break;
 
-            case 'treasure':
+            case 'treasur':
                 $this->or = rand(0, 20);
                 $_SESSION['perso']['gold'] += $this->or;
                 break;
 
             case 'combat':
+               // $_SESSION['perso']['xp'] += $this->xp;
                 break;
             
             default:
